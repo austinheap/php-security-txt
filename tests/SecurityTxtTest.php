@@ -2,10 +2,10 @@
 /**
  * tests/SecurityTxtTest.php
  *
- * @package     laravel-security-txt
- * @link        https://github.com/austinheap/laravel-security-txt
+ * @package     php-security-txt
+ * @link        https://github.com/austinheap/php-security-txt
  * @author      Austin Heap <me@austinheap.com>
- * @version     v0.2.5
+ * @version     v0.3.0
  */
 
 use AustinHeap\Security\Txt\SecurityTxt;
