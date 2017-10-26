@@ -101,6 +101,7 @@ class SecurityTxt
     /**
      * Create a new SecurityTxt instance.
      *
+     * @param  \AustinHeap\Security\Txt\Writer|\AustinHeap\Security\Txt\Reader $parent
      * @return \AustinHeap\Security\Txt\SecurityTxt
      */
     public function __construct(&$parent = null)
