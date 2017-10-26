@@ -5,7 +5,7 @@
 [![Build Status](https://travis-ci.org/austinheap/php-security-txt.svg?branch=master)](https://travis-ci.org/austinheap/php-security-txt)
 [![Code Climate](https://codeclimate.com/github/austinheap/php-security-txt/badges/gpa.svg)](https://codeclimate.com/github/austinheap/php-security-txt)
 [![Scrutinizer CI](https://scrutinizer-ci.com/g/austinheap/php-security-txt/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/austinheap/php-security-txt/)
-[![SensioLabs](https://insight.sensiolabs.com/projects/9fe66b91-58ad-4bc3-9ec9-37b396bb4837/mini.png)](https://insight.sensiolabs.com/projects/9fe66b91-58ad-4bc3-9ec9-37b396bb4837)
+[![SensioLabs](https://insight.sensiolabs.com/projects/1edfb22e-593b-43b1-88cd-98965541a2cc/mini.png)](https://insight.sensiolabs.com/projects/1edfb22e-593b-43b1-88cd-98965541a2cc)
 [![Test Coverage](https://codeclimate.com/github/austinheap/php-security-txt/badges/coverage.svg)](https://codeclimate.com/github/austinheap/php-security-txt)
 
 ## A package for manipulating `security.txt` documents in PHP 7+, based on configuration settings.
@@ -84,6 +84,7 @@ Acknowledgement: http://some.url/acks
 ## References
 
 - [A Method for Web Security Policies (draft-foudil-securitytxt-00)](https://tools.ietf.org/html/draft-foudil-securitytxt-00)
+- [laravel-security-txt](https://github.com/austinheap/laravel-security-txt)
 
 ## Credits
 
