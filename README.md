@@ -49,7 +49,7 @@ Or add the package to your `composer.json`:
 ```php
 require_once 'vendor/autoload.php';
 
-$securityTxt = new \AustinHeap\Security\Txt\SecurityTxt('path/to/security.txt');
+$reader = new \AustinHeap\Security\Txt\Reader('path/to/security.txt');
 
 var_dump($securityTxt->properties);
 ```
