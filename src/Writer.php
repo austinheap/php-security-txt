@@ -48,8 +48,9 @@ class Writer extends SecurityTxt
     {
         $comment = trim($comment);
 
-        if (!empty($comment))
+        if (!empty($comment)) {
             $comment = ' ' . $comment;
+        }
 
         return $this->line(trim('#' . $comment));
     }
@@ -71,8 +72,9 @@ class Writer extends SecurityTxt
      */
     public function spacers($count = 1): Writer
     {
-        for ($x = 0; $x < $count; $x++)
+        for ($x = 0; $x < $count; $x++) {
             $this->spacer();
+        }
 
         return $this;
     }
@@ -98,8 +100,9 @@ class Writer extends SecurityTxt
      */
     public function lines(array $lines): Writer
     {
-        foreach ($lines as $line)
+        foreach ($lines as $line) {
             $this->line($line);
+        }
 
         return $this;
     }
@@ -123,43 +126,50 @@ class Writer extends SecurityTxt
      */
     public function generate(): Writer
     {
-        if ($this->debug)
+        if ($this->debug) {
             $time = microtime(true);
+        }
 
-        if ($this->comments)
+        if ($this->comments) {
             $this->comment('Our security address');
+        }
 
-        if (empty($this->contacts))
+        if (empty($this->contacts)) {
             throw new \Exception('One (or more) contacts must be defined.');
+        }
 
-        foreach ($this->contacts as $contact)
+        foreach ($this->contacts as $contact) {
             $this->line('Contact: ' . trim($contact));
+        }
 
         if (!empty($this->encryption)) {
-            if ($this->comments)
+            if ($this->comments) {
                 $this->spacer()
                      ->comment('Our PGP key');
+            }
 
             $this->line('Encryption: ' . trim($this->encryption));
         }
 
         if (!empty($this->disclosure)) {
-            if ($this->comments)
+            if ($this->comments) {
                 $this->spacer()
                      ->comment('Our disclosure policy');
+            }
 
             $this->line('Disclosure: ' . trim(ucfirst($this->disclosure)));
         }
 
         if (!empty($this->acknowledgement)) {
-            if ($this->comments)
+            if ($this->comments) {
                 $this->spacer()
                      ->comment('Our public acknowledgement');
+            }
 
             $this->line('Acknowledgement: ' . trim($this->acknowledgement));
         }
 
-        if ($this->debug)
+        if ($this->debug) {
             $this->spacer()
                  ->comment()
                  ->comment(
@@ -172,10 +182,10 @@ class Writer extends SecurityTxt
                  ->comment('in ' . round((microtime(true) - $time) * 1000, 6) . ' seconds on ' . now() . '.')
                  ->comment()
                  ->spacer();
+        }
 
         $output = implode(PHP_EOL, $this->lines);
 
         return $this->setText($output);
     }
-
 }

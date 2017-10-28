@@ -30,5 +30,4 @@ class Reader extends SecurityTxt
     {
         return parent::__construct($this);
     }
-
 }

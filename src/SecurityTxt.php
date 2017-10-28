@@ -106,8 +106,9 @@ class SecurityTxt
      */
     public function __construct(&$parent = null)
     {
-        if (!defined('PHP_SECURITY_TXT_VERSION'))
+        if (!defined('PHP_SECURITY_TXT_VERSION')) {
             define('PHP_SECURITY_TXT_VERSION', self::VERSION);
+        }
 
         $this->parent = $parent;
 
@@ -265,8 +266,9 @@ class SecurityTxt
      */
     public function addContacts(array $contacts): SecurityTxt
     {
-        foreach ($contacts as $contact)
+        foreach ($contacts as $contact) {
             $this->contacts[$contact] = true;
+        }
 
         return $this;
     }
@@ -292,9 +294,11 @@ class SecurityTxt
      */
     public function removeContacts(array $contacts): SecurityTxt
     {
-        foreach ($contacts as $contact)
-            if (array_key_exists($contact, $this->contacts))
+        foreach ($contacts as $contact) {
+            if (array_key_exists($contact, $this->contacts)) {
                 unset($this->contacts[$contact]);
+            }
+        }
 
         return $this;
     }
@@ -307,8 +311,9 @@ class SecurityTxt
      */
     public function setEncryption(string $encryption): SecurityTxt
     {
-        if (filter_var($encryption, FILTER_VALIDATE_URL) === false)
+        if (filter_var($encryption, FILTER_VALIDATE_URL) === false) {
             throw new \Exception('Encryption must be a well-formed URL.');
+        }
 
         $this->encryption = $encryption;
 
@@ -333,8 +338,9 @@ class SecurityTxt
      */
     public function setDisclosure(string $disclosure): SecurityTxt
     {
-        if (!in_array(trim(strtolower($disclosure)), ['full', 'partial', 'none']))
+        if (!in_array(trim(strtolower($disclosure)), ['full', 'partial', 'none'])) {
             throw new \Exception('Disclosure policy must be either "full", "partial", or "none".');
+        }
 
         $this->disclosure = $disclosure;
 
@@ -359,8 +365,9 @@ class SecurityTxt
      */
     public function setAcknowledgement(string $acknowledgement): SecurityTxt
     {
-        if (filter_var($acknowledgement, FILTER_VALIDATE_URL) === false)
+        if (filter_var($acknowledgement, FILTER_VALIDATE_URL) === false) {
             throw new \Exception('Acknowledgement must be a well-formed URL.');
+        }
 
         $this->acknowledgement = $acknowledgement;
 
@@ -376,5 +383,4 @@ class SecurityTxt
     {
         return $this->acknowledgement;
     }
-
 }
