@@ -7,6 +7,7 @@
 [![Scrutinizer CI](https://scrutinizer-ci.com/g/austinheap/php-security-txt/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/austinheap/php-security-txt/)
 [![SensioLabs](https://insight.sensiolabs.com/projects/1edfb22e-593b-43b1-88cd-98965541a2cc/mini.png)](https://insight.sensiolabs.com/projects/1edfb22e-593b-43b1-88cd-98965541a2cc)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/9bf8799e6e3a0209c318/test_coverage)](https://codeclimate.com/github/austinheap/php-security-txt/test_coverage)
+[![StyleCI](https://styleci.io/repos/108443771/shield?branch=master)](https://styleci.io/repos/108443771)
 
 ## A package for manipulating `security.txt` documents in PHP 7+, based on configuration settings.
 
