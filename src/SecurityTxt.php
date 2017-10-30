@@ -110,6 +110,10 @@ class SecurityTxt
             define('PHP_SECURITY_TXT_VERSION', self::VERSION);
         }
 
+        if (!$parent instanceof Reader &&
+            !$parent instanceof Writer)
+            throw new Exception('Cannot create ' . __CLASS__ . ' with $parent class: ' . get_class($parent));
+
         $this->parent = $parent;
 
         return $this;
