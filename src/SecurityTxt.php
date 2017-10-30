@@ -115,8 +115,9 @@ class SecurityTxt
         $this->parent = $parent;
 
         if (!$this->parent instanceof Reader &&
-            !$this->parent instanceof Writer)
+            !$this->parent instanceof Writer) {
             throw new Exception('Cannot create ' . __CLASS__ . ' with $parent class: ' . get_class($this->parent));
+        }
 
         return $this;
     }
