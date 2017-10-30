@@ -11,6 +11,8 @@ declare(strict_types=1);
 
 namespace AustinHeap\Security\Txt;
 
+use Exception;
+
 /**
  * SecurityTxt
  *
@@ -110,11 +112,11 @@ class SecurityTxt
             define('PHP_SECURITY_TXT_VERSION', self::VERSION);
         }
 
-        if (!$parent instanceof Reader &&
-            !$parent instanceof Writer)
-            throw new Exception('Cannot create ' . __CLASS__ . ' with $parent class: ' . get_class($parent));
-
         $this->parent = $parent;
+
+        if (!$this->parent instanceof Reader &&
+            !$this->parent instanceof Writer)
+            throw new Exception('Cannot create ' . __CLASS__ . ' with $parent class: ' . get_class($this->parent));
 
         return $this;
     }
