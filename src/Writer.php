@@ -4,7 +4,7 @@
  *
  * @package     php-security-txt
  * @author      Austin Heap <me@austinheap.com>
- * @version     v0.3.0
+ * @version     v0.3.1
  */
 
 declare(strict_types=1);

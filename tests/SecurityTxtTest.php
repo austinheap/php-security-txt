@@ -5,7 +5,7 @@
  * @package     php-security-txt
  * @link        https://github.com/austinheap/php-security-txt
  * @author      Austin Heap <me@austinheap.com>
- * @version     v0.3.0
+ * @version     v0.3.1
  */
 
 use AustinHeap\Security\Txt\SecurityTxt;
