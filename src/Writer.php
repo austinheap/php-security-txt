@@ -138,7 +138,7 @@ class Writer extends SecurityTxt
             throw new \Exception('One (or more) contacts must be defined.');
         }
 
-        foreach ($this->contacts as $contact) {
+        foreach (array_keys($this->contacts) as $contact) {
             $this->line('Contact: ' . trim($contact));
         }
 
@@ -179,7 +179,7 @@ class Writer extends SecurityTxt
                  ->comment(
                     'using "php-security-txt"' . (defined('PHP_SECURITY_TXT_VERSION') ? ' v' . PHP_SECURITY_TXT_VERSION : '') .
                     ' (https://github.com/austinheap/php-security-txt' . (defined('PHP_SECURITY_TXT_VERSION') ? '/releases/tag/v' . PHP_SECURITY_TXT_VERSION : '') . ')')
-                 ->comment('in ' . round((microtime(true) - $time) * 1000, 6) . ' seconds on ' . now() . '.')
+                 ->comment('in ' . round((microtime(true) - $time) * 1000, 6) . ' seconds on ' . date('c') . '.')
                  ->comment()
                  ->spacer();
         }
