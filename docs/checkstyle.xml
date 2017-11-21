@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <checkstyle version="1.3.0">
   <file name="Writer.php">
-    <error line="72" severity="error" message="Argument $count is missing from the Docblock of spacers" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="76" severity="error" message="Argument $count is missing from the Docblock of spacers" source="phpDocumentor.file.PPC:ERR-50015"/>
   </file>
   <file name="SecurityTxt.php"/>
   <file name="Reader.php"/>
