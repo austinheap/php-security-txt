@@ -58,5 +58,4 @@ trait Acknowledgement
     {
         return $this->acknowledgement;
     }
-
 }

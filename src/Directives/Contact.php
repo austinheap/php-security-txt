@@ -191,5 +191,4 @@ trait Contact
 
         return true;
     }
-
 }

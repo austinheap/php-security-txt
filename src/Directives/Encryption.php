@@ -71,5 +71,4 @@ trait Encryption
     {
         return filter_var($encryption, FILTER_VALIDATE_URL) !== false;
     }
-
 }

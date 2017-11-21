@@ -70,5 +70,4 @@ trait Disclosure
     {
         return in_array($disclosure, ['full', 'partial', 'none'], true);
     }
-
 }
