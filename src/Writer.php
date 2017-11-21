@@ -4,7 +4,7 @@
  *
  * @package     php-security-txt
  * @author      Austin Heap <me@austinheap.com>
- * @version     v0.3.2
+ * @version     v0.4.0
  */
 
 declare(strict_types = 1);
@@ -20,7 +20,7 @@ use Exception;
  * @link        https://packagist.org/packages/austinheap/php-security-txt
  * @link        https://austinheap.github.io/php-security-txt/classes/AustinHeap.Security.Txt.Writer.html
  */
-class Writer extends SecurityTxt
+class Writer extends SecurityTxt implements SecurityTxtInterface
 {
 
     /**
@@ -33,7 +33,7 @@ class Writer extends SecurityTxt
     /**
      * Create a new Writer instance.
      *
-     * @return \AustinHeap\Security\Txt\Writer
+     * @return Writer|SecurityTxt
      */
     public function __construct()
     {
@@ -45,7 +45,7 @@ class Writer extends SecurityTxt
      *
      * @param  string $comment
      *
-     * @return \AustinHeap\Security\Txt\Writer
+     * @return Writer
      */
     public function comment(string $comment = ''): Writer
     {
@@ -61,7 +61,7 @@ class Writer extends SecurityTxt
     /**
      * Add a spacer to the output buffer.
      *
-     * @return \AustinHeap\Security\Txt\Writer
+     * @return Writer
      */
     public function spacer(): Writer
     {
@@ -71,9 +71,11 @@ class Writer extends SecurityTxt
     /**
      * Add multiple spacers to the output buffer.
      *
-     * @return \AustinHeap\Security\Txt\Writer
+     * @param int $count
+     *
+     * @return Writer
      */
-    public function spacers($count = 1): Writer
+    public function spacers(int $count = 1): Writer
     {
         for ($x = 0; $x < $count; $x++) {
             $this->spacer();
@@ -87,7 +89,7 @@ class Writer extends SecurityTxt
      *
      * @param  string $line
      *
-     * @return \AustinHeap\Security\Txt\Writer
+     * @return Writer
      */
     public function line(string $line): Writer
     {
@@ -101,7 +103,7 @@ class Writer extends SecurityTxt
      *
      * @param  array $lines
      *
-     * @return \AustinHeap\Security\Txt\Writer
+     * @return Writer
      */
     public function lines(array $lines): Writer
     {
@@ -115,9 +117,11 @@ class Writer extends SecurityTxt
     /**
      * Reset the output buffer.
      *
-     * @return \AustinHeap\Security\Txt\Writer
+     * @param bool $test_case
+     *
+     * @return Writer
      */
-    public function reset(): Writer
+    public function reset(bool $test_case = false): Writer
     {
         $this->lines = [];
 
@@ -125,12 +129,14 @@ class Writer extends SecurityTxt
     }
 
     /**
-     * Generate the data.
+     * Execute the SecurityTxtInterface.
      *
-     * @return \AustinHeap\Security\Txt\Writer
+     * @param bool $test_case
+     *
+     * @return Writer
      * @throws Exception
      */
-    public function generate(): Writer
+    public function execute(bool $test_case = false): Writer
     {
         if ($this->debug) {
             $time = microtime(true);

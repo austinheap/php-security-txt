@@ -167,9 +167,9 @@
         </a>
     </li>
 
-                                                                                                        <li class="method public">
-        <a href="#method_generate" title="generate :: Generate the data.">
-            <span class="description">Generate the data.</span><pre>generate</pre>
+                                                                                                        <li class="method public inherited">
+        <a href="#method_execute" title="execute :: Stub generate function. Must be overridden by inheriting class that implements SecurityTxtInterface.">
+            <span class="description">Stub generate function. Must be overridden by inheriting class that implements SecurityTxtInterface.</span><pre>execute</pre>
         </a>
     </li>
 
@@ -210,8 +210,38 @@
     </li>
 
                                                                                                         <li class="method public inherited">
+        <a href="#method_getParent" title="getParent :: Returns the parent object if it exists.">
+            <span class="description">Returns the parent object if it exists.</span><pre>getParent</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_getParentClass" title="getParentClass :: Returns the parent&#039;s class if it exists.">
+            <span class="description">Returns the parent&#039;s class if it exists.</span><pre>getParentClass</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
         <a href="#method_getText" title="getText :: Get the text.">
             <span class="description">Get the text.</span><pre>getText</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_hasContact" title="hasContact :: Determines if a contact exists.">
+            <span class="description">Determines if a contact exists.</span><pre>hasContact</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_hasContacts" title="hasContacts :: Determines if an array of contacts exists.">
+            <span class="description">Determines if an array of contacts exists.</span><pre>hasContacts</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_hasParent" title="hasParent :: Determines if the parent object was set.">
+            <span class="description">Determines if the parent object was set.</span><pre>hasParent</pre>
         </a>
     </li>
 
@@ -228,6 +258,12 @@
     </li>
 
                                                                                                         <li class="method public inherited">
+        <a href="#method_overrideMissing" title="overrideMissing :: Throws an exception when the inheriting class did not correctly implement SecurityTxtInterface.">
+            <span class="description">Throws an exception when the inheriting class did not correctly implement SecurityTxtInterface.</span><pre>overrideMissing</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
         <a href="#method_removeContact" title="removeContact :: Remove a contact.">
             <span class="description">Remove a contact.</span><pre>removeContact</pre>
         </a>
@@ -239,9 +275,9 @@
         </a>
     </li>
 
-                                                                                                        <li class="method public">
-        <a href="#method_reset" title="reset :: Reset the output buffer.">
-            <span class="description">Reset the output buffer.</span><pre>reset</pre>
+                                                                                                        <li class="method public inherited">
+        <a href="#method_reset" title="reset :: Stub reset function. Must be overridden by inheriting class that implements SecurityTxtInterface.">
+            <span class="description">Stub reset function. Must be overridden by inheriting class that implements SecurityTxtInterface.</span><pre>reset</pre>
         </a>
     </li>
 
@@ -299,15 +335,39 @@
         </a>
     </li>
 
+                                                                                                        <li class="method public inherited">
+        <a href="#method_validContact" title="validContact :: Validates a contact.">
+            <span class="description">Validates a contact.</span><pre>validContact</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_validContacts" title="validContacts :: Validates an array of contacts.">
+            <span class="description">Validates an array of contacts.</span><pre>validContacts</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_validDisclosure" title="validDisclosure :: Determines if disclosure is valid.">
+            <span class="description">Determines if disclosure is valid.</span><pre>validDisclosure</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_validEncryption" title="validEncryption :: Determines if encryption is valid.">
+            <span class="description">Determines if encryption is valid.</span><pre>validEncryption</pre>
+        </a>
+    </li>
+
                                                 </ul>
         </li>
         <li class="nav-header protected">» Protected
             <ul>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </ul>
         </li>
         <li class="nav-header private">» Private
             <ul>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </ul>
         </li>
         <li class="nav-header">
             <i class="icon-custom icon-constant"></i> Constants
@@ -329,7 +389,8 @@
                 <h1>Writer</h1>
                 <small style="display: block; text-align: right">
                                             Extends <a href="../classes/AustinHeap.Security.Txt.SecurityTxt.html">\AustinHeap\Security\Txt\SecurityTxt</a>
-                                                        </small>
+                                                                Implements <a href="../classes/AustinHeap.Security.Txt.SecurityTxtInterface.html">\AustinHeap\Security\Txt\SecurityTxtInterface</a>
+                                    </small>
                 <p class="short_description">Writer</p>
                 <div class="details">
                     <div class="long_description">
@@ -378,7 +439,7 @@
                                                                 <a id="method___construct"></a>
                         <div class="element clickable method public  method___construct inherited" data-toggle="collapse" data-target=".method___construct .collapse">
                             <h2>Create a new SecurityTxt instance.</h2>
-                            <pre>__construct(\AustinHeap\Security\Txt\Writer|\AustinHeap\Security\Txt\Reader &$parent = null) : \AustinHeap\Security\Txt\SecurityTxt</pre>
+                            <pre>__construct(\AustinHeap\Security\Txt\Writer|\AustinHeap\Security\Txt\Reader &$parent = null) : \AustinHeap\Security\Txt\SecurityTxt|\AustinHeap\Security\Txt\Writer|\AustinHeap\Security\Txt\Reader</pre>
                             <div class="labels">
                                 <span class="label">inherited</span>                                                                                                                                                            </div>
 
@@ -397,7 +458,7 @@
                                             </div>
                                                                             
                                                                             <h3>Response</h3>
-                                        <code><a href="../classes/AustinHeap.Security.Txt.SecurityTxt.html">\AustinHeap\Security\Txt\SecurityTxt</a></code><p></p>
+                                        <code><a href="../classes/AustinHeap.Security.Txt.SecurityTxt.html">\AustinHeap\Security\Txt\SecurityTxt</a>|<a href="../classes/AustinHeap.Security.Txt.Writer.html">\AustinHeap\Security\Txt\Writer</a>|<a href="../classes/AustinHeap.Security.Txt.Reader.html">\AustinHeap\Security\Txt\Reader</a></code><p></p>
                                                                     </div>
                             </div>
 
@@ -599,12 +660,12 @@
                             </div>
 
                         </div>
-                                            <a id="method_generate"></a>
-                        <div class="element clickable method public  method_generate" data-toggle="collapse" data-target=".method_generate .collapse">
-                            <h2>Generate the data.</h2>
-                            <pre>generate() : \AustinHeap\Security\Txt\Writer</pre>
+                                            <a id="method_execute"></a>
+                        <div class="element clickable method public  method_execute inherited" data-toggle="collapse" data-target=".method_execute .collapse">
+                            <h2>Stub generate function. Must be overridden by inheriting class that implements SecurityTxtInterface.</h2>
+                            <pre>execute(boolean $test_case = false) : \AustinHeap\Security\Txt\Reader|\AustinHeap\Security\Txt\Writer|null</pre>
                             <div class="labels">
-                                                                                                                                                                                            </div>
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
 
                             
                             <div class="row collapse">
@@ -612,13 +673,6 @@
                                     <div class="long_description"></div>
 
                                     <table class="table">
-                                                                                    <tr>
-                                                <th>
-                                                    
-                                                </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
                                                                                                                             <tr>
                                                 <th>Throws</th>
                                                 <td>
@@ -630,9 +684,14 @@
                                             </tr>
                                                                             </table>
 
-                                    
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$test_case</h4>
+                                                <code>boolean</code><p></p>
+                                            </div>
+                                                                            
                                                                             <h3>Response</h3>
-                                        <code><a href="../classes/AustinHeap.Security.Txt.Writer.html">\AustinHeap\Security\Txt\Writer</a></code><p></p>
+                                        <code><a href="../classes/AustinHeap.Security.Txt.Reader.html">\AustinHeap\Security\Txt\Reader</a>|<a href="../classes/AustinHeap.Security.Txt.Writer.html">\AustinHeap\Security\Txt\Writer</a>|null</code><p></p>
                                                                     </div>
                             </div>
 
@@ -811,6 +870,64 @@
                             </div>
 
                         </div>
+                                            <a id="method_getParent"></a>
+                        <div class="element clickable method public  method_getParent inherited" data-toggle="collapse" data-target=".method_getParent .collapse">
+                            <h2>Returns the parent object if it exists.</h2>
+                            <pre>getParent() : \AustinHeap\Security\Txt\Reader|\AustinHeap\Security\Txt\Writer</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/AustinHeap.Security.Txt.Reader.html">\AustinHeap\Security\Txt\Reader</a>|<a href="../classes/AustinHeap.Security.Txt.Writer.html">\AustinHeap\Security\Txt\Writer</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getParentClass"></a>
+                        <div class="element clickable method public  method_getParentClass inherited" data-toggle="collapse" data-target=".method_getParentClass .collapse">
+                            <h2>Returns the parent&#039;s class if it exists.</h2>
+                            <pre>getParentClass() : string</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
                                             <a id="method_getText"></a>
                         <div class="element clickable method public  method_getText inherited" data-toggle="collapse" data-target=".method_getText .collapse">
                             <h2>Get the text.</h2>
@@ -836,6 +953,89 @@
                                     
                                                                             <h3>Response</h3>
                                         <code>string</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_hasContact"></a>
+                        <div class="element clickable method public  method_hasContact inherited" data-toggle="collapse" data-target=".method_hasContact .collapse">
+                            <h2>Determines if a contact exists.</h2>
+                            <pre>hasContact(string $contact) : boolean</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$contact</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>boolean</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_hasContacts"></a>
+                        <div class="element clickable method public  method_hasContacts inherited" data-toggle="collapse" data-target=".method_hasContacts .collapse">
+                            <h2>Determines if an array of contacts exists.</h2>
+                            <pre>hasContacts(array $contacts) : boolean</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$contacts</h4>
+                                                <code>array</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>boolean</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_hasParent"></a>
+                        <div class="element clickable method public  method_hasParent inherited" data-toggle="collapse" data-target=".method_hasParent .collapse">
+                            <h2>Determines if the parent object was set.</h2>
+                            <pre>hasParent() : boolean</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>boolean</code><p></p>
                                                                     </div>
                             </div>
 
@@ -890,6 +1090,46 @@
                                                                             
                                                                             <h3>Response</h3>
                                         <code><a href="../classes/AustinHeap.Security.Txt.Writer.html">\AustinHeap\Security\Txt\Writer</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_overrideMissing"></a>
+                        <div class="element clickable method public  method_overrideMissing inherited" data-toggle="collapse" data-target=".method_overrideMissing .collapse">
+                            <h2>Throws an exception when the inheriting class did not correctly implement SecurityTxtInterface.</h2>
+                            <pre>overrideMissing(string $function, boolean $test_case = false) : null</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                            <tr>
+                                                <th>Throws</th>
+                                                <td>
+                                                    <dl>
+                                                                                                            <dt>\Exception</dt>
+                                                        <dd></dd>
+                                                                                                                                                            </dl>
+                                                </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$function</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$test_case</h4>
+                                                <code>boolean</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>null</code><p></p>
                                                                     </div>
                             </div>
 
@@ -949,11 +1189,11 @@
 
                         </div>
                                             <a id="method_reset"></a>
-                        <div class="element clickable method public  method_reset" data-toggle="collapse" data-target=".method_reset .collapse">
-                            <h2>Reset the output buffer.</h2>
-                            <pre>reset() : \AustinHeap\Security\Txt\Writer</pre>
+                        <div class="element clickable method public  method_reset inherited" data-toggle="collapse" data-target=".method_reset .collapse">
+                            <h2>Stub reset function. Must be overridden by inheriting class that implements SecurityTxtInterface.</h2>
+                            <pre>reset(boolean $test_case = false) : \AustinHeap\Security\Txt\Reader|\AustinHeap\Security\Txt\Writer|null</pre>
                             <div class="labels">
-                                                                                                                                                                                            </div>
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
 
                             
                             <div class="row collapse">
@@ -961,18 +1201,25 @@
                                     <div class="long_description"></div>
 
                                     <table class="table">
-                                                                                    <tr>
-                                                <th>
-                                                    
-                                                </th>
+                                                                                                                            <tr>
+                                                <th>Throws</th>
                                                 <td>
-                                                                                                    </td>
+                                                    <dl>
+                                                                                                            <dt>\Exception</dt>
+                                                        <dd></dd>
+                                                                                                                                                            </dl>
+                                                </td>
                                             </tr>
-                                                                                                                    </table>
+                                                                            </table>
 
-                                    
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$test_case</h4>
+                                                <code>boolean</code><p></p>
+                                            </div>
+                                                                            
                                                                             <h3>Response</h3>
-                                        <code><a href="../classes/AustinHeap.Security.Txt.Writer.html">\AustinHeap\Security\Txt\Writer</a></code><p></p>
+                                        <code><a href="../classes/AustinHeap.Security.Txt.Reader.html">\AustinHeap\Security\Txt\Reader</a>|<a href="../classes/AustinHeap.Security.Txt.Writer.html">\AustinHeap\Security\Txt\Writer</a>|null</code><p></p>
                                                                     </div>
                             </div>
 
@@ -1198,7 +1445,7 @@
                                             <a id="method_spacers"></a>
                         <div class="element clickable method public  method_spacers" data-toggle="collapse" data-target=".method_spacers .collapse">
                             <h2>Add multiple spacers to the output buffer.</h2>
-                            <pre>spacers( $count = 1) : \AustinHeap\Security\Txt\Writer</pre>
+                            <pre>spacers(integer $count = 1) : \AustinHeap\Security\Txt\Writer</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -1208,23 +1455,137 @@
                                     <div class="long_description"></div>
 
                                     <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$count</h4>
+                                                <code>integer</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/AustinHeap.Security.Txt.Writer.html">\AustinHeap\Security\Txt\Writer</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_validContact"></a>
+                        <div class="element clickable method public  method_validContact inherited" data-toggle="collapse" data-target=".method_validContact .collapse">
+                            <h2>Validates a contact.</h2>
+                            <pre>validContact(string $contact) : boolean</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
                                                                                     <tr>
                                                 <th>
-                                                    
+                                                    string
                                                 </th>
                                                 <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>string $contact</p>
                                                                                                     </td>
                                             </tr>
                                                                                                                     </table>
 
                                                                             <h3>Arguments</h3>
                                                                                     <div class="subelement argument">
-                                                <h4>$count</h4>
-                                                <code></code><p></p>
+                                                <h4>$contact</h4>
+                                                <code>string</code><p></p>
                                             </div>
                                                                             
                                                                             <h3>Response</h3>
-                                        <code><a href="../classes/AustinHeap.Security.Txt.Writer.html">\AustinHeap\Security\Txt\Writer</a></code><p></p>
+                                        <code>boolean</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_validContacts"></a>
+                        <div class="element clickable method public  method_validContacts inherited" data-toggle="collapse" data-target=".method_validContacts .collapse">
+                            <h2>Validates an array of contacts.</h2>
+                            <pre>validContacts(array $contacts, boolean $use_keys = false) : boolean</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$contacts</h4>
+                                                <code>array</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$use_keys</h4>
+                                                <code>boolean</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>boolean</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_validDisclosure"></a>
+                        <div class="element clickable method public  method_validDisclosure inherited" data-toggle="collapse" data-target=".method_validDisclosure .collapse">
+                            <h2>Determines if disclosure is valid.</h2>
+                            <pre>validDisclosure(string $disclosure) : boolean</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$disclosure</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>boolean</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_validEncryption"></a>
+                        <div class="element clickable method public  method_validEncryption inherited" data-toggle="collapse" data-target=".method_validEncryption .collapse">
+                            <h2>Determines if encryption is valid.</h2>
+                            <pre>validEncryption(string $encryption) : boolean</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$encryption</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>boolean</code><p></p>
                                                                     </div>
                             </div>
 
@@ -1561,7 +1922,7 @@
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Tue, 21 Nov 2017 10:33:09 +0000.<br/>
+            generated on Tue, 21 Nov 2017 20:12:54 +0000.<br/>
     </footer>
     </body>
 </html>

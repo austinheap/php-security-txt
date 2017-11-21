@@ -4,13 +4,17 @@
  *
  * @package     php-security-txt
  * @author      Austin Heap <me@austinheap.com>
- * @version     v0.3.2
+ * @version     v0.4.0
  */
 
-declare(strict_types=1);
+declare(strict_types = 1);
 
 namespace AustinHeap\Security\Txt;
 
+use AustinHeap\Security\Txt\Directives\Acknowledgement;
+use AustinHeap\Security\Txt\Directives\Contact;
+use AustinHeap\Security\Txt\Directives\Disclosure;
+use AustinHeap\Security\Txt\Directives\Encryption;
 use Exception;
 
 /**
@@ -20,91 +24,83 @@ use Exception;
  * @link        https://packagist.org/packages/austinheap/php-security-txt
  * @link        https://austinheap.github.io/php-security-txt/classes/AustinHeap.Security.Txt.SecurityTxt.html
  */
-class SecurityTxt
+class SecurityTxt implements SecurityTxtInterface
 {
+    /**
+     * Directive trait: Contact
+     */
+    use Contact;
+
+    /**
+     * Directive trait: Encryption
+     */
+    use Encryption;
+
+    /**
+     * Directive trait: Disclosure
+     */
+    use Disclosure;
+
+    /**
+     * Directive trait: Acknowledgement
+     */
+    use Acknowledgement;
 
     /**
      * Internal version number.
      *
      * @var string
      */
-    const VERSION               = '0.3.2';
+    const VERSION = '0.4.0';
 
     /**
      * Internal parent object.
      *
      * @var \AustinHeap\Security\Txt\Writer|\AustinHeap\Security\Txt\Reader
      */
-    private $parent             = null;
+    private $parent = null;
 
     /**
      * Internal Writer object.
      *
      * @var \AustinHeap\Security\Txt\Writer
      */
-    protected $writer           = null;
+    protected $writer = null;
 
     /**
      * Internal Reader object.
      *
      * @var \AustinHeap\Security\Txt\Reader
      */
-    protected $reader           = null;
+    protected $reader = null;
 
     /**
      * Internal text cache.
      *
      * @var string
      */
-    protected $text             = null;
+    protected $text = null;
 
     /**
      * Enable debug output.
      *
      * @var bool
      */
-    protected $debug            = false;
+    protected $debug = false;
 
     /**
      * Enable built-in comments.
      *
      * @var bool
      */
-    protected $comments         = true;
-
-    /**
-     * The security contact(s).
-     *
-     * @var array
-     */
-    protected $contacts         = [];
-
-    /**
-     * The PGP key file URL.
-     *
-     * @var string
-     */
-    protected $encryption       = null;
-
-    /**
-     * The disclosure policy.
-     *
-     * @var string
-     */
-    protected $disclosure       = null;
-
-    /**
-     * The acknowledgement URL.
-     *
-     * @var string
-     */
-    protected $acknowledgement  = null;
+    protected $comments = true;
 
     /**
      * Create a new SecurityTxt instance.
      *
-     * @param  \AustinHeap\Security\Txt\Writer|\AustinHeap\Security\Txt\Reader $parent
-     * @return \AustinHeap\Security\Txt\SecurityTxt
+     * @param  Writer|Reader $parent
+     *
+     * @return SecurityTxt|Writer|Reader
      */
     public function __construct(&$parent = null)
     {
@@ -114,12 +110,49 @@ class SecurityTxt
 
         $this->parent = $parent;
 
-        if (!$this->parent instanceof Reader &&
-            !$this->parent instanceof Writer) {
-            throw new Exception('Cannot create ' . __CLASS__ . ' with $parent class: ' . get_class($this->parent));
+        if (func_num_args() == 1) {
+            if (is_null($this->parent)) {
+                throw new Exception('Cannot create ' . __CLASS__ . ' with explicitly null $parent class.');
+            } else if (!$this->parent instanceof Reader && !$this->parent instanceof Writer) {
+                throw new Exception('Cannot create ' . __CLASS__ . ' with $parent class: ' . get_class($this->parent));
+            }
         }
 
         return $this;
+    }
+
+    /**
+     * Returns the parent's class if it exists.
+     *
+     * @return string
+     */
+    public function getParentClass(): string
+    {
+        return get_class($this->getParent());
+    }
+
+    /**
+     * Returns the parent object if it exists.
+     *
+     * @return Reader|Writer
+     */
+    public function getParent()
+    {
+        if (!$this->hasParent()) {
+            throw new Exception('Parent object is not set.');
+        }
+
+        return $this->parent;
+    }
+
+    /**
+     * Determines if the parent object was set.
+     *
+     * @return bool
+     */
+    public function hasParent(): bool
+    {
+        return !is_null($this->parent);
     }
 
     /**
@@ -145,7 +178,8 @@ class SecurityTxt
     /**
      * Set the comments flag.
      *
-     * @param  string       $comments
+     * @param  string $comments
+     *
      * @return \AustinHeap\Security\Txt\SecurityTxt
      */
     public function setComments(bool $comments): SecurityTxt
@@ -188,7 +222,8 @@ class SecurityTxt
     /**
      * Set the debug flag.
      *
-     * @param  bool         $debug
+     * @param  bool $debug
+     *
      * @return \AustinHeap\Security\Txt\SecurityTxt
      */
     public function setDebug(bool $debug): SecurityTxt
@@ -211,7 +246,8 @@ class SecurityTxt
     /**
      * Set the text.
      *
-     * @param  string       $text
+     * @param  string $text
+     *
      * @return \AustinHeap\Security\Txt\SecurityTxt
      */
     public function setText(string $text): SecurityTxt
@@ -232,162 +268,46 @@ class SecurityTxt
     }
 
     /**
-     * Set the contacts.
+     * Stub generate function. Must be overridden by inheriting class that implements SecurityTxtInterface.
      *
-     * @param  array        $contacts
-     * @return \AustinHeap\Security\Txt\SecurityTxt
+     * @param bool $test_case
+     *
+     * @return Reader|Writer|null
+     * @throws Exception
      */
-    public function setContacts(array $contacts): SecurityTxt
+    public function execute(bool $test_case = false)
     {
-        $this->contacts = $contacts;
-
-        return $this;
+        return $this->overrideMissing(__FUNCTION__, $test_case);
     }
 
     /**
-     * Get the contacts.
+     * Stub reset function. Must be overridden by inheriting class that implements SecurityTxtInterface.
      *
-     * @return array
+     * @param bool $test_case
+     *
+     * @return Reader|Writer|null
+     * @throws Exception
      */
-    public function getContacts(): array
+    public function reset(bool $test_case = false)
     {
-        return is_null($this->contacts) ? [] : $this->contacts;
+        return $this->overrideMissing(__FUNCTION__, $test_case);
     }
 
     /**
-     * Add a contact.
+     * Throws an exception when the inheriting class did not correctly implement SecurityTxtInterface.
      *
-     * @param  string $contact
-     * @return \AustinHeap\Security\Txt\SecurityTxt
-     */
-    public function addContact(string $contact): SecurityTxt
-    {
-        return $this->addContacts([$contact]);
-    }
-
-    /**
-     * Add contacts.
+     * @param string $function
+     * @param bool   $test_case
      *
-     * @param  array $contacts
-     * @return \AustinHeap\Security\Txt\SecurityTxt
+     * @return null
+     * @throws Exception
      */
-    public function addContacts(array $contacts): SecurityTxt
+    public function overrideMissing(string $function, bool $test_case = false)
     {
-        foreach ($contacts as $contact) {
-            $this->contacts[$contact] = true;
+        if ($test_case) {
+            return null;
         }
 
-        return $this;
-    }
-
-    /**
-     * Remove a contact.
-     *
-     * @param  string $contact
-     * @return \AustinHeap\Security\Txt\SecurityTxt
-     */
-    public function removeContact(string $contact): SecurityTxt
-    {
-        $this->removeContacts([$contact]);
-
-        return $this;
-    }
-
-    /**
-     * Remove contacts.
-     *
-     * @param  array $contacts
-     * @return \AustinHeap\Security\Txt\SecurityTxt
-     */
-    public function removeContacts(array $contacts): SecurityTxt
-    {
-        foreach ($contacts as $contact) {
-            if (array_key_exists($contact, $this->contacts)) {
-                unset($this->contacts[$contact]);
-            }
-        }
-
-        return $this;
-    }
-
-    /**
-     * Set the encryption.
-     *
-     * @param  string $encryption
-     * @return \AustinHeap\Security\Txt\SecurityTxt
-     */
-    public function setEncryption(string $encryption): SecurityTxt
-    {
-        if (filter_var($encryption, FILTER_VALIDATE_URL) === false) {
-            throw new \Exception('Encryption must be a well-formed URL.');
-        }
-
-        $this->encryption = $encryption;
-
-        return $this;
-    }
-
-    /**
-     * Get the encryption.
-     *
-     * @return string
-     */
-    public function getEncryption(): string
-    {
-        return $this->encryption;
-    }
-
-    /**
-     * Set the disclosure policy.
-     *
-     * @param  string $disclosure
-     * @return \AustinHeap\Security\Txt\SecurityTxt
-     */
-    public function setDisclosure(string $disclosure): SecurityTxt
-    {
-        if (!in_array(trim(strtolower($disclosure)), ['full', 'partial', 'none'])) {
-            throw new \Exception('Disclosure policy must be either "full", "partial", or "none".');
-        }
-
-        $this->disclosure = $disclosure;
-
-        return $this;
-    }
-
-    /**
-     * Get the disclosure policy.
-     *
-     * @return string
-     */
-    public function getDisclosure(): string
-    {
-        return $this->disclosure;
-    }
-
-    /**
-     * Set the acknowledgement URL.
-     *
-     * @param  string $acknowledgement
-     * @return \AustinHeap\Security\Txt\SecurityTxt
-     */
-    public function setAcknowledgement(string $acknowledgement): SecurityTxt
-    {
-        if (filter_var($acknowledgement, FILTER_VALIDATE_URL) === false) {
-            throw new \Exception('Acknowledgement must be a well-formed URL.');
-        }
-
-        $this->acknowledgement = $acknowledgement;
-
-        return $this;
-    }
-
-    /**
-     * Get the acknowledgement URL.
-     *
-     * @return string
-     */
-    public function getAcknowledgement(): string
-    {
-        return $this->acknowledgement;
+        throw new Exception('Function "' . $function . '" must be overridden by parent SecurityTxtInterface before being called.');
     }
 }
