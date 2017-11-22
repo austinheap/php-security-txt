@@ -1,0 +1,32 @@
+{
+    "name": "austinheap/php-security-txt",
+    "description": "A package for manipulating `security.txt` documents in PHP 7+, based on configuration settings.",
+    "keywords": [
+        "security.txt",
+        "security",
+        "route"
+    ],
+    "homepage": "https://github.com/austinheap/php-security-txt",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Austin Heap",
+            "email": "me@austinheap.com",
+            "homepage": "https://github.com/austinheap",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0"
+    },
+    "require-dev": {
+        "codeclimate/php-test-reporter": "dev-master",
+        "phpunit/phpunit": "~6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "AustinHeap\\Security\\Txt\\": "src"
+        }
+    },
+    "minimum-stability": "stable"
+}

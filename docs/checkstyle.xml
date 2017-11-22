@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<checkstyle version="1.3.0">
+  <file name="Directives/Encryption.php"/>
+  <file name="Writer.php"/>
+  <file name="Directives/Acknowledgement.php"/>
+  <file name="SecurityTxt.php"/>
+  <file name="Directives/Disclosure.php"/>
+  <file name="Directives/Contact.php"/>
+  <file name="Reader.php"/>
+  <file name="SecurityTxtInterface.php">
+    <error line="23" severity="error" message="Argument $test_case is missing from the Docblock of execute" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="23" severity="error" message="No summary for method execute()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="24" severity="error" message="Argument $test_case is missing from the Docblock of reset" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="24" severity="error" message="No summary for method reset()" source="phpDocumentor.file.PPC:ERR-50008"/>
+  </file>
+</checkstyle>
