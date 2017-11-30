@@ -2,6 +2,7 @@
 
 ![php-security-txt banner from the documentation](docs/img/banner-1544x500.png?raw=true)
 
+[![License](https://img.shields.io/packagist/l/austinheap/php-security-txt.svg)](https://github.com/austinheap/php-security-txt/blob/master/LICENSE.md)
 [![Current Release](https://img.shields.io/github/release/austinheap/php-security-txt.svg)](https://github.com/austinheap/php-security-txt/releases)
 [![Total Downloads](https://img.shields.io/packagist/dt/austinheap/php-security-txt.svg)](https://packagist.org/packages/austinheap/php-security-txt)
 [![Build Status](https://travis-ci.org/austinheap/php-security-txt.svg?branch=master)](https://travis-ci.org/austinheap/php-security-txt)
