@@ -1,1 +1,1 @@
-include: ["docs/coverage/.css", "docs/coverage/.js", "docs/coverage/.fonts"]
+include: ["coverage/.css", "coverage/.js", "coverage/.fonts"]
