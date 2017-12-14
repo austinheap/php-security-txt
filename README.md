@@ -29,6 +29,17 @@ There is [documentation for `php-security-txt` online](https://austinheap.github
 the source of which is in the [`docs/`](https://github.com/austinheap/php-security-txt/tree/master/docs)
 directory. The most logical place to start are the [docs for the `SecurityTxt` class](https://austinheap.github.io/php-security-txt/classes/AustinHeap.Security.Txt.SecurityTxt.html).
 
+## Table of Contents
+
+* [Summary](#a-package-for-manipulating-securitytxt-documents-in-php-7-based-on-configuration-settings)
+* [Installation](#installation)
+    + [Step 1: Composer](#step-1-composer)
+    + [Step 2: Manipulate a `security.txt` document](#step-2-manipulate-a-securitytxt-document)
+* [Unit Tests](#unit-tests)
+* [References](#references)
+* [Credits](#credits)
+* [License](#license)
+
 ## Installation
 
 ### Step 1: Composer
@@ -85,6 +96,13 @@ Acknowledgement: http://some.url/acks
 # in 0.041008 seconds on 2017-10-26 20:31:25.
 #
 ```
+
+## Unit Tests
+
+This package has aggressive unit tests built with PHPUnit.
+
+There are [code coverage reports for `php-security-txt`](https://austinheap.github.io/php-security-txt/coverage/)
+available online.
 
 ## References
 
