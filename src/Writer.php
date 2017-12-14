@@ -138,9 +138,7 @@ class Writer extends SecurityTxt implements SecurityTxtInterface
      */
     public function execute(bool $test_case = false): Writer
     {
-        if ($this->debug) {
-            $time = microtime(true);
-        }
+        $time = microtime(true);
 
         if ($this->comments) {
             $this->comment('Our security address');
@@ -181,7 +179,7 @@ class Writer extends SecurityTxt implements SecurityTxtInterface
             $this->line('Acknowledgement: ' . trim($this->acknowledgement));
         }
 
-        if ($this->debug && isset($time)) {
+        if ($this->debug) {
             $this->spacer()
                  ->comment()
                  ->comment(
