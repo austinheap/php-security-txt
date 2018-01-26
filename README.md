@@ -108,6 +108,7 @@ available online.
 
 - [A Method for Web Security Policies (draft-foudil-securitytxt-00)](https://tools.ietf.org/html/draft-foudil-securitytxt-00)
 - [laravel-security-txt](https://github.com/austinheap/laravel-security-txt)
+- [securitytext.org](https://securitytext.org/)
 
 ## Credits
 

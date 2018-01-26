@@ -8,9 +8,9 @@
   <file name="Directives/Contact.php"/>
   <file name="Reader.php"/>
   <file name="SecurityTxtInterface.php">
-    <error line="23" severity="error" message="Argument $test_case is missing from the Docblock of execute" source="phpDocumentor.file.PPC:ERR-50015"/>
-    <error line="23" severity="error" message="No summary for method execute()" source="phpDocumentor.file.PPC:ERR-50008"/>
-    <error line="24" severity="error" message="Argument $test_case is missing from the Docblock of reset" source="phpDocumentor.file.PPC:ERR-50015"/>
-    <error line="24" severity="error" message="No summary for method reset()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="24" severity="error" message="Argument $test_case is missing from the Docblock of execute" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="24" severity="error" message="No summary for method execute()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="25" severity="error" message="Argument $test_case is missing from the Docblock of reset" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="25" severity="error" message="No summary for method reset()" source="phpDocumentor.file.PPC:ERR-50008"/>
   </file>
 </checkstyle>

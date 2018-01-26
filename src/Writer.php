@@ -19,6 +19,7 @@ use Exception;
  * @link        https://github.com/austinheap/php-security-txt
  * @link        https://packagist.org/packages/austinheap/php-security-txt
  * @link        https://austinheap.github.io/php-security-txt/classes/AustinHeap.Security.Txt.Writer.html
+ * @link        https://securitytext.org/
  */
 class Writer extends SecurityTxt implements SecurityTxtInterface
 {

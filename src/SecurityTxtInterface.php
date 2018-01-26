@@ -17,6 +17,7 @@ namespace AustinHeap\Security\Txt;
  * @link        https://github.com/austinheap/php-security-txt
  * @link        https://packagist.org/packages/austinheap/php-security-txt
  * @link        https://austinheap.github.io/php-security-txt/classes/AustinHeap.Security.Txt.SecurityTxt.html
+ * @link        https://securitytext.org/
  */
 interface SecurityTxtInterface
 {
